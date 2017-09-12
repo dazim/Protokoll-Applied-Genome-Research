@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage[top=3cm,bottom=3cm, left=3cm, right=3cm]{geometry}
+\usepackage{tabularx}
+\usepackage{import}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\usepackage{tikz}
+\usepackage{float}
+
+% For line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+\graphicspath{{plots/}}
+
+\usepackage{datatool}
+\DTLsetseparator{;}
+%\DTLloaddb[keys={U,dU,ImA,IA,dI,R,dR}]{lampe}{data/nichtlineare_bauelemente_lampe_errors.csv}
+
+\usepackage{amsfonts}
+\usepackage{threeparttable}
+\usepackage[ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{enumitem} % For Checkboxes in List
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage[format=plain, justification=justified, labelfont=bf]{caption}
+\usepackage[autostyle]{csquotes}
+
+\usepackage{lineno} %For linenumbers
+
+% Set captionsizes to smaller font
+\setkomafont{caption}{\footnotesize}
+\setkomafont{captionlabel}{\usekomafont{caption}}
+
+% Define Checkbox-list
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\title{
+	\vspace{2cm}
+	\large
+	{\Large Protokoll zum Seminar} \\
+	\vspace{\baselineskip}
+	{\LARGE "Applied Genome Research"} \\
+	\vspace{\baselineskip}
+	{\Large 205026, SS17}
+	\vspace{3cm}
+}
+
+\author{
+	\Large
+	\textbf{angefertigt von} \\
+	\vspace{\baselineskip}
+	Tim Treis \\
+	{\large 2796706, tim.treis@uni-bielefeld.de}
+	\vspace{0.8cm}
+}
+
+
+\date{
+	\raggedright
+	\normalsize
+	Hiermit versichere ich, dass ich das vorliegende Protokoll eigenständig und nur unter Benutzung der angegebenen Hilfsmittel angefertigt habe. Alle zitierten oder sinngemäß übernommenen Textstellen aus der Literatur bzw. dem Internet sind als solche gekennzeichnet und die benutzten Quellen vollständig angegeben. \\
+	\vspace{\baselineskip}
+	Mir ist bekannt, dass der Versuch, das Ergebnis einer Modulprüfung oder Modulteilprüfung durch Täuschung zu beeinflussen, dazu führen kann, dass die betreffende Prüfung als mit "nicht bestanden" bewertet wird. Mehrfache oder schwerwiegende Täuschungsversuche können mit Exmatrikulation geahndet werden (BPO § 31). \\
+	\vspace{2cm}
+	\noindent\rule{5cm}{0.4pt} \hfill \noindent\rule{5cm}{0.4pt} \\
+	Datum \hspace{8.45cm} Unterschrift
+}
+
+\pagestyle{fancy}
+
+\usepackage[backend=biber,
+style=authoryear,
+doi=false,
+isbn=false,
+url=false]{biblatex}
+\addbibresource{document/references.bib}
+\renewcommand*{\nameyeardelim}{\addcomma\space}\DefineBibliographyStrings{ngerman}{
+	andothers = {{et\,al\adddot}},
+}
+
+\lhead{Applied Genome Research}
+\chead{}
+\cfoot{}
+\rhead{SS17}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\rfoot{\thepage}
+\thispagestyle{empty}
+\setcounter{page}{1}
+
+\begin{document}
+
+	\shorthandoff{"}
+
+	\maketitle
+	\thispagestyle{empty
+
+	\newpage
+	\thispagestyle{empty}
+	\tableofcontents
+
+	\newpage
+    \linenumbers
+	\setcounter{page}{1}
+
+	\input{document/general.tex}
+
+	\newpage
+	\input{document/generate.tex}
+
+	\newpage
+	\input{document/assembly.tex}
+
+	\newpage
+	\input{document/annotation.tex}
+
+	\newpage
+	\input{document/variants.tex}
+
+	\newpage
+	\input{document/rnaseq.tex}
+
+    \newpage
+	\section{Literature}
+
+    	\printbibliography[heading=none]
+
+\end{document}

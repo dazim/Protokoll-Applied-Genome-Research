@@ -1,0 +1,4 @@
+PWD C:/Users/Tim/Documents/GIT/Protokoll-Applied-Genome-Research/document
+INPUT C:/Users/Tim/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT rnaseq.tex
+OUTPUT rnaseq.log

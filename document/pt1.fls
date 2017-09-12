@@ -1,0 +1,4 @@
+PWD C:/Users/Tim/Desktop/Test-Latex/document
+INPUT C:/Users/Tim/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT pt1.tex
+OUTPUT pt1.log
